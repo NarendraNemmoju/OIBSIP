@@ -1,0 +1,1646 @@
+/* =========================================================
+   APJ ABDUL KALAM TRIBUTE PAGE
+   PROFESSIONAL RESPONSIVE DESIGN
+========================================================= */
+
+
+/* =========================================================
+   GOOGLE FONTS
+========================================================= */
+
+/*
+   Poppins          → Body text
+   Playfair Display → Headings
+*/
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "Poppins", sans-serif;
+
+    color: #172033;
+
+    background: #f7f5f0;
+
+    line-height: 1.7;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   COLOR VARIABLES
+========================================================= */
+
+:root {
+
+    --navy: #071a33;
+
+    --dark-navy: #03101f;
+
+    --blue: #0b4f71;
+
+    --light-blue: #0a3853;
+
+    --gold: #d6a84f;
+
+    --gold-light: #e4bc67;
+
+    --cream: #f7f5f0;
+
+    --white: #ffffff;
+
+    --text: #172033;
+
+    --light-text: #667085;
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    z-index: 100;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.navbar {
+
+    width: 100%;
+
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    padding: 28px 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+}
+
+
+.logo span {
+
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid var(--gold);
+
+    color: var(--gold);
+
+    border-radius: 50%;
+
+    font-size: 12px;
+}
+
+
+.nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 35px;
+
+    list-style: none;
+}
+
+
+.nav-links a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 400;
+
+    transition: 0.3s ease;
+}
+
+
+.nav-links a:hover {
+
+    color: var(--gold);
+}
+
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
+
+.hero {
+
+    min-height: 100vh;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 130px 7% 80px;
+
+    background:
+
+        radial-gradient(
+            circle at 80% 30%,
+            rgba(30, 105, 145, 0.45),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            120deg,
+            #06172d,
+            #0a3853
+        );
+
+    color: white;
+}
+
+
+/* Background circle */
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+
+    height: 450px;
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    border-radius: 50%;
+
+    right: -150px;
+
+    bottom: -180px;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content {
+
+    width: 100%;
+
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 80px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   HERO TEXT
+========================================================= */
+
+.hero-text {
+
+    max-width: 670px;
+
+    flex: 1;
+}
+
+
+.eyebrow {
+
+    color: var(--gold);
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+
+.hero-text h1 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(50px, 7vw, 88px);
+
+    line-height: 1.05;
+
+    font-weight: 700;
+
+    margin-bottom: 25px;
+}
+
+
+.hero-text h1 span {
+
+    display: block;
+
+    color: #dceaf1;
+}
+
+
+.hero-description {
+
+    max-width: 600px;
+
+    color: #c9d8e1;
+
+    font-size: 17px;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+
+.hero-buttons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+.primary-btn,
+.secondary-btn {
+
+    display: inline-block;
+
+    padding: 13px 24px;
+
+    border-radius: 5px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+
+.primary-btn {
+
+    background: var(--gold);
+
+    color: var(--navy);
+}
+
+
+.primary-btn:hover {
+
+    background: var(--gold-light);
+
+    transform: translateY(-3px);
+}
+
+
+.secondary-btn {
+
+    border: 1px solid rgba(255,255,255,0.35);
+
+    color: white;
+}
+
+
+.secondary-btn:hover {
+
+    border-color: var(--gold);
+
+    color: var(--gold);
+}
+
+
+/* =========================================================
+   HERO STATS
+========================================================= */
+
+.hero-stats {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 45px;
+
+    margin-top: 50px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+
+.hero-stats div {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.hero-stats strong {
+
+    font-family: "Playfair Display", serif;
+
+    color: var(--gold);
+
+    font-size: 24px;
+}
+
+
+.hero-stats small {
+
+    color: #9fb2bf;
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   IMAGE CONTAINER
+   THIS CONTROLS THE COMPLETE IMAGE AREA
+========================================================= */
+
+.hero-image-container {
+
+    position: relative;
+
+    width: 390px;
+
+    height: 520px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-start;
+}
+
+
+/* =========================================================
+   MAIN IMAGE FRAME
+========================================================= */
+
+.hero-image {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 10px;
+
+    width: 370px;
+
+    height: 470px;
+
+    overflow: hidden;
+
+    border-radius: 5px;
+
+    background: #d9e1e5;
+
+    border: 5px solid rgba(255,255,255,0.16);
+
+    box-shadow:
+
+        0 25px 60px rgba(0,0,0,0.40);
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   APJ KALAM IMAGE
+========================================================= */
+
+.hero-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center top;
+
+    transition: transform 0.5s ease;
+}
+
+
+.hero-image:hover img {
+
+    transform: scale(1.03);
+}
+
+
+/* =========================================================
+   GOLD FRAME
+   ALIGNED WITH THE IMAGE
+========================================================= */
+
+.image-decoration {
+
+    position: absolute;
+
+    /*
+       Same position as the image.
+       This prevents the previous uneven
+       left/top alignment.
+    */
+
+    top: 0;
+
+    left: 10px;
+
+    width: 370px;
+
+    height: 470px;
+
+    border: 2px solid var(--gold);
+
+    border-radius: 2px;
+
+    z-index: 3;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   IMAGE CAPTION
+========================================================= */
+
+.image-caption {
+
+    position: absolute;
+
+    top: 480px;
+
+    right: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #aebfc9;
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    white-space: nowrap;
+
+    z-index: 4;
+}
+
+
+.image-caption span {
+
+    display: block;
+
+    width: 30px;
+
+    height: 2px;
+
+    background: var(--gold);
+}
+
+
+/* =========================================================
+   SCROLL INDICATOR
+========================================================= */
+
+.scroll-indicator {
+
+    position: absolute;
+
+    bottom: 30px;
+
+    left: 7%;
+
+    color: #7f96a4;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    z-index: 3;
+}
+
+
+.scroll-indicator span {
+
+    display: block;
+
+    width: 35px;
+
+    height: 1px;
+
+    background: var(--gold);
+}
+
+
+/* =========================================================
+   COMMON SECTION
+========================================================= */
+
+.section {
+
+    padding: 110px 7%;
+}
+
+
+.section-header {
+
+    max-width: 750px;
+
+    margin: 0 auto 70px;
+
+    text-align: center;
+}
+
+
+.section-label {
+
+    color: var(--blue);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 12px;
+}
+
+
+.section-header h2 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(35px, 5vw, 55px);
+
+    line-height: 1.2;
+
+    color: var(--navy);
+}
+
+
+.section-header h2 span {
+
+    color: var(--blue);
+}
+
+
+.line {
+
+    width: 45px;
+
+    height: 2px;
+
+    background: var(--gold);
+
+    margin: 25px auto 0;
+}
+
+
+/* =========================================================
+   ABOUT SECTION
+========================================================= */
+
+.about {
+
+    background: var(--cream);
+}
+
+
+.about-content {
+
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 35% 65%;
+
+    gap: 70px;
+}
+
+
+.about-intro {
+
+    padding-top: 5px;
+}
+
+
+.large-number {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 80px;
+
+    color: #d9d3c7;
+
+    line-height: 1;
+}
+
+
+.about-intro h3 {
+
+    font-family: "Playfair Display", serif;
+
+    color: var(--navy);
+
+    font-size: 32px;
+
+    line-height: 1.3;
+
+    margin-top: 10px;
+}
+
+
+.biography p {
+
+    color: #596273;
+
+    font-size: 15px;
+
+    margin-bottom: 22px;
+
+    text-align: justify;
+}
+
+
+/* =========================================================
+   ACHIEVEMENTS
+========================================================= */
+
+.achievements {
+
+    background: var(--navy);
+
+    color: white;
+}
+
+
+.light .section-label {
+
+    color: var(--gold);
+}
+
+
+.light h2 {
+
+    color: white;
+}
+
+
+.light h2 span {
+
+    color: #b9d4e0;
+}
+
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.timeline {
+
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    position: relative;
+}
+
+
+.timeline::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 0;
+
+    bottom: 0;
+
+    width: 1px;
+
+    background: rgba(255,255,255,0.15);
+
+    transform: translateX(-50%);
+}
+
+
+.timeline-item {
+
+    width: 50%;
+
+    padding: 0 50px 45px;
+
+    position: relative;
+}
+
+
+.timeline-item:nth-child(even) {
+
+    margin-left: 50%;
+}
+
+
+.year {
+
+    position: absolute;
+
+    right: -25px;
+
+    top: 0;
+
+    width: 50px;
+
+    height: 50px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: var(--gold);
+
+    color: var(--navy);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    z-index: 2;
+}
+
+
+.timeline-item:nth-child(even) .year {
+
+    left: -25px;
+
+    right: auto;
+}
+
+
+.timeline-card {
+
+    padding: 25px;
+
+    background: rgba(255,255,255,0.06);
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    border-radius: 5px;
+
+    transition: all 0.3s ease;
+}
+
+
+.timeline-card:hover {
+
+    transform: translateY(-5px);
+
+    border-color: rgba(214,168,79,0.5);
+}
+
+
+.timeline-card h3 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 22px;
+
+    margin-bottom: 8px;
+}
+
+
+.timeline-card p {
+
+    color: #aebdca;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   QUOTE SECTION
+========================================================= */
+
+.quote-section {
+
+    background: #e9f1f3;
+
+    padding: 120px 7%;
+}
+
+
+.quote-container {
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+.quote-symbol {
+
+    font-family: "Playfair Display", serif;
+
+    color: var(--gold);
+
+    font-size: 100px;
+
+    line-height: 0.5;
+}
+
+
+blockquote {
+
+    font-family: "Playfair Display", serif;
+
+    color: var(--navy);
+
+    font-size: clamp(25px, 4vw, 38px);
+
+    line-height: 1.4;
+
+    font-style: italic;
+
+    margin: 30px 0;
+}
+
+
+.quote-author {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    color: var(--blue);
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+.quote-author span {
+
+    width: 35px;
+
+    height: 1px;
+
+    background: var(--gold);
+}
+
+
+/* =========================================================
+   INSPIRATION SECTION
+========================================================= */
+
+.inspiration {
+
+    background: white;
+
+    padding: 100px 7%;
+
+    text-align: center;
+}
+
+
+.inspiration-content {
+
+    max-width: 850px;
+
+    margin: 0 auto;
+}
+
+
+.inspiration h2 {
+
+    font-family: "Playfair Display", serif;
+
+    color: var(--navy);
+
+    font-size: clamp(30px, 5vw, 55px);
+
+    line-height: 1.2;
+
+    margin: 20px 0;
+}
+
+
+.inspiration p:last-child {
+
+    color: var(--light-text);
+
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+    background: var(--dark-navy);
+
+    color: white;
+
+    padding: 50px 7% 25px;
+}
+
+
+.footer-content {
+
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding-bottom: 35px;
+
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+
+.footer-logo {
+
+    width: 55px;
+
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid var(--gold);
+
+    color: var(--gold);
+
+    border-radius: 50%;
+
+    font-weight: 600;
+}
+
+
+.footer-content h3 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 20px;
+}
+
+
+.footer-content p {
+
+    color: #8193a1;
+
+    font-size: 12px;
+}
+
+
+.footer-bottom {
+
+    max-width: 1150px;
+
+    margin: 20px auto 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #627381;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   TABLET RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .hero-content {
+
+        gap: 40px;
+    }
+
+
+    .hero-image-container {
+
+        width: 390px;
+    }
+
+
+    .hero-text h1 {
+
+        font-size: clamp(48px, 6vw, 72px);
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .hero {
+
+        padding-top: 150px;
+
+        padding-bottom: 80px;
+    }
+
+
+    .hero-content {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 60px;
+    }
+
+
+    .hero-text {
+
+        max-width: 700px;
+
+        width: 100%;
+    }
+
+
+    .hero-description {
+
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+
+    .hero-buttons {
+
+        justify-content: center;
+    }
+
+
+    .hero-stats {
+
+        justify-content: center;
+    }
+
+
+    /* IMAGE */
+
+    .hero-image-container {
+
+        width: 390px;
+
+        height: 520px;
+
+        margin: 0 auto;
+
+        display: block;
+    }
+
+
+    .hero-image {
+
+        top: 0;
+
+        left: 10px;
+
+        width: 370px;
+
+        height: 470px;
+    }
+
+
+    .image-decoration {
+
+        top: 0;
+
+        left: 10px;
+
+        width: 370px;
+
+        height: 470px;
+    }
+
+
+    .image-caption {
+
+        top: 480px;
+
+        right: 10px;
+    }
+
+
+    /* ABOUT */
+
+    .about-content {
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+
+    .about-intro {
+
+        text-align: center;
+    }
+
+
+    /* TIMELINE */
+
+    .timeline-item {
+
+        width: 100%;
+
+        margin-left: 0 !important;
+
+        padding-left: 75px;
+
+        padding-right: 0;
+    }
+
+
+    .timeline::before {
+
+        left: 25px;
+    }
+
+
+    .year,
+
+    .timeline-item:nth-child(even) .year {
+
+        left: 0;
+
+        right: auto;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    /* NAV */
+
+    .navbar {
+
+        padding: 20px;
+    }
+
+
+    .nav-links {
+
+        display: none;
+    }
+
+
+    /* HERO */
+
+    .hero {
+
+        padding: 120px 20px 70px;
+
+        min-height: auto;
+    }
+
+
+    .hero-content {
+
+        gap: 55px;
+    }
+
+
+    .hero-text h1 {
+
+        font-size: 46px;
+    }
+
+
+    .hero-description {
+
+        font-size: 15px;
+    }
+
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        width: 100%;
+    }
+
+
+    .primary-btn,
+
+    .secondary-btn {
+
+        text-align: center;
+
+        width: 100%;
+    }
+
+
+    .hero-stats {
+
+        gap: 25px;
+
+        justify-content: center;
+    }
+
+
+    .hero-stats strong {
+
+        font-size: 20px;
+    }
+
+
+    /* =====================================================
+       MOBILE IMAGE
+       PERFECTLY CENTERED
+    ===================================================== */
+
+    .hero-image-container {
+
+        width: 290px;
+
+        height: 390px;
+
+        margin: 0 auto;
+
+        display: block;
+    }
+
+
+    .hero-image {
+
+        position: absolute;
+
+        top: 0;
+
+        left: 10px;
+
+        width: 270px;
+
+        height: 350px;
+
+        margin: 0;
+    }
+
+
+    .image-decoration {
+
+        position: absolute;
+
+        top: 0;
+
+        left: 10px;
+
+        width: 270px;
+
+        height: 350px;
+
+        border-width: 2px;
+    }
+
+
+    .image-caption {
+
+        display: none;
+    }
+
+
+    /* SECTIONS */
+
+    .section {
+
+        padding: 80px 20px;
+    }
+
+
+    .section-header {
+
+        margin-bottom: 50px;
+    }
+
+
+    .section-header h2 {
+
+        font-size: 35px;
+    }
+
+
+    /* BIOGRAPHY */
+
+    .biography p {
+
+        text-align: left;
+
+        font-size: 14px;
+    }
+
+
+    /* TIMELINE */
+
+    .timeline {
+
+        padding-top: 10px;
+    }
+
+
+    .timeline-item {
+
+        padding-left: 65px;
+
+        padding-bottom: 35px;
+    }
+
+
+    .timeline::before {
+
+        left: 20px;
+    }
+
+
+    .year,
+
+    .timeline-item:nth-child(even) .year {
+
+        left: -5px;
+
+        width: 45px;
+
+        height: 45px;
+    }
+
+
+    .timeline-card {
+
+        padding: 20px;
+    }
+
+
+    /* QUOTE */
+
+    .quote-section {
+
+        padding: 80px 20px;
+    }
+
+
+    .quote-symbol {
+
+        font-size: 75px;
+    }
+
+
+    blockquote {
+
+        font-size: 23px;
+    }
+
+
+    .quote-author {
+
+        font-size: 9px;
+    }
+
+
+    /* INSPIRATION */
+
+    .inspiration {
+
+        padding: 80px 20px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+
+        padding: 40px 20px 25px;
+    }
+
+
+    .footer-content {
+
+        justify-content: center;
+
+        text-align: center;
+
+        flex-direction: column;
+    }
+
+
+    .footer-bottom {
+
+        flex-direction: column;
+
+        gap: 8px;
+
+        text-align: center;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .hero-text h1 {
+
+        font-size: 40px;
+    }
+
+
+    .hero-image-container {
+
+        width: 270px;
+
+        height: 370px;
+    }
+
+
+    .hero-image {
+
+        width: 250px;
+
+        height: 330px;
+
+        left: 10px;
+    }
+
+
+    .image-decoration {
+
+        width: 250px;
+
+        height: 330px;
+
+        left: 10px;
+    }
+
+
+    .hero-stats {
+
+        gap: 18px;
+    }
+
+}
