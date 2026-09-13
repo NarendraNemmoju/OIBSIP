@@ -1,0 +1,242 @@
+/* ===================================================================
+   Tokens
+=================================================================== */
+:root {
+  --page-bg-1: #171513;
+  --page-bg-2: #0f0e0c;
+
+  --case-bg-1: #2c2925;
+  --case-bg-2: #211e1b;
+  --case-edge: #403b34;
+
+  --display-bg-1: #cdd6bd;
+  --display-bg-2: #b9c3a7;
+  --display-text: #26311f;
+  --display-text-dim: #64735a;
+
+  --key-num-bg: #3c3733;
+  --key-num-bg-hi: #47423c;
+  --key-num-text: #eee7d9;
+
+  --key-func-bg: #55504a;
+  --key-func-bg-hi: #625c54;
+  --key-func-text: #f1ece1;
+
+  --key-op-bg: #8fa07f;
+  --key-op-bg-hi: #9dae8d;
+  --key-op-text: #1d2416;
+
+  --key-equals-bg: #c99a2e;
+  --key-equals-bg-hi: #d9ab3e;
+  --key-equals-text: #211603;
+
+  --rivet-base: #15130f;
+  --rivet-hi: #4b453d;
+
+  --font-display: "JetBrains Mono", "Courier New", monospace;
+  --font-ui: "Manrope", system-ui, sans-serif;
+
+  --radius-case: 22px;
+  --radius-key: 12px;
+}
+
+/* ===================================================================
+   Reset & page
+=================================================================== */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+  font-family: var(--font-ui);
+  background:
+    radial-gradient(circle at 50% 15%, var(--page-bg-1), var(--page-bg-2) 70%);
+}
+
+/* ===================================================================
+   Case
+=================================================================== */
+.calculator {
+  width: 100%;
+  max-width: 340px;
+}
+
+.case {
+  position: relative;
+  padding: 22px 18px 24px;
+  border-radius: var(--radius-case);
+  background: linear-gradient(160deg, var(--case-bg-1), var(--case-bg-2) 65%);
+  border: 1px solid var(--case-edge);
+  box-shadow:
+    0 30px 60px -20px rgba(0, 0, 0, 0.65),
+    0 2px 0 rgba(255, 255, 255, 0.04) inset,
+    0 -2px 12px rgba(0, 0, 0, 0.35) inset;
+}
+
+.rivet {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, var(--rivet-hi), var(--rivet-base) 70%);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+}
+.rivet--tl { top: 12px; left: 12px; }
+.rivet--tr { top: 12px; right: 12px; }
+.rivet--bl { bottom: 12px; left: 12px; }
+.rivet--br { bottom: 12px; right: 12px; }
+
+/* ===================================================================
+   Brand row
+=================================================================== */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 2px 6px 14px;
+}
+
+.brand__mark {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--key-op-bg);
+  box-shadow: 0 0 6px var(--key-op-bg);
+}
+
+.brand__text {
+  font-family: var(--font-display);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: #8a8378;
+}
+
+/* ===================================================================
+   Display
+=================================================================== */
+.display {
+  border-radius: 14px;
+  padding: 18px 16px 14px;
+  margin-bottom: 16px;
+  background: linear-gradient(165deg, var(--display-bg-1), var(--display-bg-2));
+  box-shadow:
+    0 3px 10px rgba(0, 0, 0, 0.45) inset,
+    0 -1px 0 rgba(255, 255, 255, 0.15) inset,
+    0 1px 0 rgba(0, 0, 0, 0.4);
+  text-align: right;
+  overflow: hidden;
+}
+
+.display__history {
+  margin: 0 0 4px;
+  min-height: 16px;
+  font-family: var(--font-display);
+  font-size: 13px;
+  color: var(--display-text-dim);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.display__value {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(28px, 9vw, 38px);
+  line-height: 1.1;
+  color: var(--display-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+/* ===================================================================
+   Keypad
+=================================================================== */
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.key {
+  appearance: none;
+  border: none;
+  border-radius: var(--radius-key);
+  padding: 16px 0;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 17px;
+  cursor: pointer;
+  transition: transform 0.05s ease, filter 0.15s ease;
+}
+
+.key:active {
+  transform: translateY(2px);
+}
+
+.key--num {
+  background: var(--key-num-bg);
+  color: var(--key-num-text);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.35), 0 1px 0 rgba(255, 255, 255, 0.05) inset;
+}
+.key--num:hover { background: var(--key-num-bg-hi); }
+
+.key--func {
+  background: var(--key-func-bg);
+  color: var(--key-func-text);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.35), 0 1px 0 rgba(255, 255, 255, 0.06) inset;
+}
+.key--func:hover { background: var(--key-func-bg-hi); }
+
+.key--op {
+  background: var(--key-op-bg);
+  color: var(--key-op-text);
+  font-size: 19px;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.35), 0 1px 0 rgba(255, 255, 255, 0.12) inset;
+}
+.key--op:hover { background: var(--key-op-bg-hi); }
+
+.key--op.is-active {
+  filter: brightness(1.15);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.35) inset;
+}
+
+.key--equals {
+  background: var(--key-equals-bg);
+  color: var(--key-equals-text);
+  font-size: 19px;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4), 0 1px 0 rgba(255, 255, 255, 0.2) inset;
+}
+.key--equals:hover { background: var(--key-equals-bg-hi); }
+
+.key:focus-visible {
+  outline: 2px solid #eee7d9;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .key {
+    transition: none;
+  }
+}
+
+/* ===================================================================
+   Small screens
+=================================================================== */
+@media (max-width: 360px) {
+  .key {
+    padding: 14px 0;
+    font-size: 16px;
+  }
+}

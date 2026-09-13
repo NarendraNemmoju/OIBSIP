@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Dashboard | SecureAuth</title>
+
+    <meta
+        name="description"
+        content="SecureAuth user dashboard"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body class="dashboard-page">
+
+    <!-- Navigation -->
+    <header class="dashboard-header">
+
+        <div class="dashboard-nav">
+
+            <a href="dashboard.html" class="dashboard-logo">
+
+                <div class="brand-logo small">
+                    <span>SA</span>
+                </div>
+
+                <span>SecureAuth</span>
+
+            </a>
+
+
+            <div class="user-menu">
+
+                <div class="user-avatar" id="userAvatar">
+                    U
+                </div>
+
+                <div class="user-info">
+
+                    <strong id="navUserName">
+                        User
+                    </strong>
+
+                    <span id="navUserEmail">
+                        user@example.com
+                    </span>
+
+                </div>
+
+
+                <button
+                    class="logout-btn"
+                    id="logoutBtn"
+                >
+                    Logout
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- Main Dashboard -->
+    <main class="dashboard-main">
+
+        <!-- Welcome -->
+        <section class="welcome-section">
+
+            <div>
+
+                <span class="welcome-label">
+                    DASHBOARD
+                </span>
+
+                <h1>
+                    Welcome back,
+                    <span id="welcomeUser">
+                        User
+                    </span>!
+                </h1>
+
+                <p>
+                    Here's an overview of your SecureAuth account.
+                </p>
+
+            </div>
+
+            <div class="status-badge">
+
+                <span class="status-dot"></span>
+
+                Account Active
+
+            </div>
+
+        </section>
+
+
+        <!-- Stats -->
+        <section class="stats-grid">
+
+            <article class="stat-card">
+
+                <div class="stat-icon">
+                    👤
+                </div>
+
+                <div>
+
+                    <span class="stat-label">
+                        Account
+                    </span>
+
+                    <strong>
+                        Active
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <article class="stat-card">
+
+                <div class="stat-icon">
+                    🔐
+                </div>
+
+                <div>
+
+                    <span class="stat-label">
+                        Security
+                    </span>
+
+                    <strong>
+                        Protected
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <article class="stat-card">
+
+                <div class="stat-icon">
+                    ⚡
+                </div>
+
+                <div>
+
+                    <span class="stat-label">
+                        Status
+                    </span>
+
+                    <strong>
+                        Online
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <article class="stat-card">
+
+                <div class="stat-icon">
+                    📅
+                </div>
+
+                <div>
+
+                    <span class="stat-label">
+                        Member Since
+                    </span>
+
+                    <strong id="memberSince">
+                        Today
+                    </strong>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- Dashboard Content -->
+        <section class="dashboard-grid">
+
+
+            <!-- Profile Card -->
+            <article class="dashboard-card profile-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <span class="card-eyebrow">
+                            PROFILE
+                        </span>
+
+                        <h2>Your Profile</h2>
+
+                    </div>
+
+                    <div class="card-icon">
+                        👤
+                    </div>
+
+                </div>
+
+
+                <div class="profile-content">
+
+                    <div class="large-avatar" id="largeAvatar">
+                        U
+                    </div>
+
+                    <div class="profile-details">
+
+                        <h3 id="profileName">
+                            User
+                        </h3>
+
+                        <p id="profileEmail">
+                            user@example.com
+                        </p>
+
+                        <span class="verified-badge">
+                            ✓ Verified Account
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- Security Card -->
+            <article class="dashboard-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <span class="card-eyebrow">
+                            SECURITY
+                        </span>
+
+                        <h2>Account Security</h2>
+
+                    </div>
+
+                    <div class="card-icon">
+                        🛡
+                    </div>
+
+                </div>
+
+
+                <div class="security-list">
+
+                    <div class="security-item">
+
+                        <div class="security-check">
+                            ✓
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Password Protection
+                            </strong>
+
+                            <p>
+                                Your account is password protected.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="security-item">
+
+                        <div class="security-check">
+                            ✓
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Email Verified
+                            </strong>
+
+                            <p>
+                                Your email address is registered.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="security-item">
+
+                        <div class="security-check">
+                            ✓
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Secure Session
+                            </strong>
+
+                            <p>
+                                Your current session is active.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- Quick Actions -->
+            <article class="dashboard-card quick-actions">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <span class="card-eyebrow">
+                            QUICK ACTIONS
+                        </span>
+
+                        <h2>Get Started</h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="action-list">
+
+                    <button
+                        class="action-button"
+                        id="profileAction"
+                    >
+
+                        <span>👤</span>
+
+                        <div>
+                            <strong>View Profile</strong>
+                            <small>Manage your account details</small>
+                        </div>
+
+                        <b>→</b>
+
+                    </button>
+
+
+                    <button
+                        class="action-button"
+                        id="securityAction"
+                    >
+
+                        <span>🔒</span>
+
+                        <div>
+                            <strong>Security Settings</strong>
+                            <small>Review your account security</small>
+                        </div>
+
+                        <b>→</b>
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- Activity -->
+            <article class="dashboard-card activity-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <span class="card-eyebrow">
+                            ACTIVITY
+                        </span>
+
+                        <h2>Recent Activity</h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="activity-list">
+
+                    <div class="activity-item">
+
+                        <span class="activity-icon">
+                            🔑
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Successful Login
+                            </strong>
+
+                            <p>
+                                You signed in successfully.
+                            </p>
+
+                        </div>
+
+                        <time>
+                            Now
+                        </time>
+
+                    </div>
+
+
+                    <div class="activity-item">
+
+                        <span class="activity-icon">
+                            ✓
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Account Active
+                            </strong>
+
+                            <p>
+                                Your account is ready to use.
+                            </p>
+
+                        </div>
+
+                        <time>
+                            Today
+                        </time>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <footer class="dashboard-footer">
+
+            <p>
+                © 2026 SecureAuth. Built for OIBSIP Web Development.
+            </p>
+
+            <span>
+                Secure • Modern • Responsive
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
