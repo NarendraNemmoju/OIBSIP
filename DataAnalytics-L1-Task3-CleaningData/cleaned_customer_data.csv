@@ -1,0 +1,11 @@
+Customer_ID,Name,Gender,Age,Purchase_Amount,Purchase_Date
+101,Rahul,Male,25.0,1200.0,2026-10-01
+102,Priya,Female,30.0,2500.0,
+103,Arun,Male,28.0,1800.0,
+104,Sneha,Female,30.0,2200.0,
+105,Kiran,Male,35.0,2000.0,
+105,Kiran,Male,35.0,3000.0,
+106,Vijay,Male,29.0,1500.0,
+107,Anu,Female,30.0,2000.0,2026-10-07
+108,Ravi,Male,32.0,3475.0,2026-12-08
+109,Meena,Female,27.0,1700.0,2026-05-09
